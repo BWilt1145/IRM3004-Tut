@@ -1,0 +1,30 @@
+<form action="/login" method="post">
+    <div>
+      <label for="Username">Username:</label>
+      <input type="text" id="Username" name="Username" required>
+    </div>
+    <div>
+      <label for="Password">Password:</label>
+      <input type="Password" id="Password" name="Password" required>
+      <input type="checkbox" id="ShowPassword" onclick="togglePassword()">
+    </div>
+    <div>
+      <input type="submit" value="Login">
+    </div>
+  </form>
+
+  <script>
+    function togglePassword()
+    {
+      var password = document.getElementById("Password");
+      var showPassword = document.getElementById("ShowPassword");
+      if (ShowPassword.checked)
+      {
+        password.type = "text";
+      } 
+      else
+      {
+        password.type = "password";
+      }
+    }
+  </script>
